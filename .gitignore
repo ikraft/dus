@@ -7,4 +7,5 @@
 */settings/local.py
 docs/requirements/local.txt
 */.sass-cache
+static/*
 
