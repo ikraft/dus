@@ -4,7 +4,8 @@
 *.pot
 *.sqlite3
 *.db
-etc/django/local.py
+*/settings/local.py
 docs/requirements/local.txt
 */.sass-cache
+static/*
 
