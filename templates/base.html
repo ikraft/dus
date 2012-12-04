@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <!-- Set the viewport width to device width for mobile -->
+  <meta name="viewport" content="width=device-width" />
+  <title>{% block title %}{% endblock %}DUS - A url shortner with analytics</title>
+  {% block styles %}{% endblock %}
+  {% block scripts %}{% endblock %}
+</head>
+<body>
+  <header>
+  </header>
+  <div id="page" class="row">
+  {% block page %}{% endblock %}
+  </div>
+  <footer></footer>
+{% block closure %}{% endblock %}
+</body>
+</html>

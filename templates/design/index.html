@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block page %}
+<div class="row collapse">
+  <form id="shortner" action="." method="get">
+  <div class="ten mobile-three columns">
+    <input type="text" placeholder="Paste your long url here..." />
+  </div>
+  <div class="two mobile-one columns">
+    <a class="button expand postfix">Shorten URL</a>
+  </div>
+  </form>
+</div>
+<div id="shortned" class="row">
+  <div class="url six mobile-two columns">
+    <a href="#">http://d.us/</a>
+  </div>
+  <div class="qr six mobile-two columns">
+    <img src="{{ STATIC_URL }}img/qr.gif">
+  </div>
+</div>
+{% endblock %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{{ STATIC_URL }}css/design/index.css">
+{% endblock %}
