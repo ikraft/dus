@@ -46,7 +46,7 @@ WSGI_APPLICATION = 'dus.wsgi.application'
 TEMPLATE_DIRS = (
         root('templates'),
 )
-
+SITE_ID = 1
 INSTALLED_APPS += (
     'django.contrib.auth',
     'django.contrib.contenttypes',
