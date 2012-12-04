@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 import hashlib
 
 class Link(models.Model):
-    key = models.CharField(max_length=16)
+    key = models.CharField(max_length=64)
     link = models.URLField()
     user = models.ForeignKey(User)
     modified = models.DateTimeField(auto_now_add=True)
