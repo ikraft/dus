@@ -58,8 +58,11 @@ INSTALLED_APPS += (
     # Third Party
     'south',
     'social_auth',
+    'django-rq'
 
     # Internal
+    'apps.links',
+    'apps.analytics'
 
 )
 
@@ -84,5 +87,27 @@ LOGGING = {
             'level': 'ERROR',
             'propagate': True,
         },
+    }
+}
+
+GEOIP_PATH = root()
+GEOIP_COUNTRY = root('GeoIP.dat')
+GEOIP_CITY = root('GeoLiteCity.dat')
+
+RQ_QUEUES = {
+    'default': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
+        'PASSWORD': 'password',
+    },
+    'high': {
+        'URL': os.getenv('REDISTOGO_URL', 'redis://localhost:6379'), # If you're on Heroku
+        'DB': 0,
+    },
+    'low': {
+        'HOST': 'localhost',
+        'PORT': 6379,
+        'DB': 0,
     }
 }
